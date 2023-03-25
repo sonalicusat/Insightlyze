@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>Analysis Results</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Raleway', sans-serif;
+        background-color: #fff;
+        font-size: 0.73rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: cursive;
+    color: purple;
+}
+
+    h2 {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+    .image-container:nth-child(4) {
+        animation-delay: 2s;
+    }
+    .image-container:nth-child(5) {
+        animation-delay: 4s;
+    }
+    .image-container:nth-child(6) {
+        animation-delay: 6s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+  </style>
+</head>
+<body>
+    <h1>Event | {{ event_type }} | {{ client }} | {{ period }}</h1>
+<br><br><br><br>
+    <h2>Word Cloud - Event</h2> 
+   <div class="image-container">
+        <img src="{% url 'word_cloud_csv_event' %}" alt="Word Cloud - Event" width="600" height="400">
+    </div>
+        <br><br><br><br>
+    <br><br><br><br>
+</body>
+</html> 
