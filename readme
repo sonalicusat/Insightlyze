@@ -1,0 +1,39 @@
+To start working on the project, first set up Django on your local computer and then follow the hierarchy provided below.
+
+D:\Insightlyze
+| db.sqlite3
+| manage.py
+|
+---Insightlyze
+| asgi.py
+| database.py
+| forms.py
+| models.py
+| settings.py
+| urls.py
+| views.py
+| wsgi.py
+|
++---static
+| +---css
+| | | style.css
+| |
+| +---images
+| | ...
+| |
+| +---js
+| | ...
+| |
+| +---videos
+| | ...
+| |
+| | histogram.csv
+| | wc_event.csv
+| | wc_post.csv
+| | wc_prior.csv
+| | wordcloud_event.png
+| |
+|
+---templates
+analysis.html
+insightlyze.html
